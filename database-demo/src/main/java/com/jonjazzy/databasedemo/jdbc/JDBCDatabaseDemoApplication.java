@@ -1,29 +1,25 @@
-package com.jonjazzy.databasedemo;
+package com.jonjazzy.databasedemo.jdbc;
 
 import com.jonjazzy.databasedemo.entity.Person;
-import com.jonjazzy.databasedemo.jdbc.PersonJdbcDOA;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.jdbc.core.RowMapper;
 
-import java.sql.ResultSet;
-import java.sql.SQLException;
 import java.util.Date;
 
-@SpringBootApplication
-public class DatabaseDemoApplication implements CommandLineRunner {
+//@SpringBootApplication
+public class JDBCDatabaseDemoApplication implements CommandLineRunner {
 
-	Logger LOGGER = LoggerFactory.getLogger(DatabaseDemoApplication.class);
+	Logger LOGGER = LoggerFactory.getLogger(JDBCDatabaseDemoApplication.class);
 
 	@Autowired
 	PersonJdbcDOA dao;
 
 	public static void main(String[] args) {
-		SpringApplication.run(DatabaseDemoApplication.class, args);
+		SpringApplication.run(JDBCDatabaseDemoApplication.class, args);
 	}
 
 	@Override

@@ -1,6 +1,5 @@
 package com.jonjazzy.databasedemo.jdbc;
 
-import com.jonjazzy.databasedemo.DatabaseDemoApplication;
 import com.jonjazzy.databasedemo.entity.Person;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;

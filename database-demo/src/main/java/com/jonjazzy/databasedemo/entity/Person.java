@@ -1,17 +1,34 @@
 package com.jonjazzy.databasedemo.entity;
 
+import javax.persistence.*;
 import java.util.Date;
 
+@Entity
+//@Table(name="Person")
 public class Person
 {
+    @Id
+    @GeneratedValue
     private int id;
+
+//    @Column(name="name")
     private String name;
+
     private String location;
     private Date birthDate;
 
+    //A No-ARgument Constructor is necessary
     public Person()
     {
 
+    }
+
+    //Method that doesnt specify Id
+    public Person(String name, String location, Date birthDate) {
+        super();    //Allow hibernate set the Id
+        this.name = name;
+        this.location = location;
+        this.birthDate = birthDate;
     }
 
     public Person(int id, String name, String location, Date birthDate) {
