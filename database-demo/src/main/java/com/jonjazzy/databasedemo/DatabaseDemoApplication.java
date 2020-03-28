@@ -8,13 +8,17 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.jdbc.core.RowMapper;
 
+import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.Date;
 
 @SpringBootApplication
 public class DatabaseDemoApplication implements CommandLineRunner {
 
 	Logger LOGGER = LoggerFactory.getLogger(DatabaseDemoApplication.class);
+
 	@Autowired
 	PersonJdbcDOA dao;
 
